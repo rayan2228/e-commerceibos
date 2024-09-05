@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer components {
+    .separator {
+        @apply text-base font-medium relative after:absolute after:top-1/2 after:right-0 after:content-[''] after:bg-[#F1F0F0] after:w-[48%] after:translate-y-[-50%] after:h-1 before:absolute before:top-1/2 before:left-0 before:content-[''] before:bg-[#F1F0F0] before:w-[48%] before:translate-y-[-50%] before:h-1 text-center
+    }
+}

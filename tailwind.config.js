@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        "barlow":["Barlow"]
+      },
+      colors:{
+        cbg:"#FAFAFA",
+        cStroke:"#F5F5F5",
+        tSecondary:"#707070"
+      }
+    },
   },
   plugins: [],
 }
