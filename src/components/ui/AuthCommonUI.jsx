@@ -17,7 +17,7 @@ const AuthCommonUI = () => {
         </label>
       </Flex>
       <Button
-        text={"Signup"}
+        text={pathname === "/register" ? "Sign In" : "Sign Up"}
         className={
           "bg-black text-white py-4 text-base font-semibold rounded-md"
         }
@@ -88,7 +88,7 @@ const AuthCommonUI = () => {
       <p className="text-sm font-medium text-center">
         Have an account?{" "}
         <Link
-          className="text-[#0F3DDE]"
+          className="text-[#0F3DDE] ml-2"
           to={pathname === "/register" ? "/login" : "/register"}
         >
           {pathname === "/register" ? "Sign In" : "Sign Up"}

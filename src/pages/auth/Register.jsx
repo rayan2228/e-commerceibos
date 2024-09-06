@@ -4,15 +4,15 @@ import Input from "../../components/ui/Input";
 import Password from "../../components/ui/Password";
 const Register = () => {
   return (
-    <Flex className="flex-col items-center w-3/4 gap-2 p-6 bg-cbg border-cStroke">
-      <h4 className="text-2xl font-semibold">Welcome To</h4>
-      <div>
-        <img src="/FurniFlexBlack.png" alt="" />
-      </div>
-      <p className="text-base font-medium text-tSecondary">
-        Signup for purchase your desire products
-      </p>
-      <Flex className={"flex-col gap-4 w-full"}>
+    <>
+      <Flex className="flex-col items-center gap-3">
+        <h4 className="text-2xl font-semibold">Welcome To</h4>
+        <img src="/FurniFlexBlack.png" alt=""  />
+        <p className="text-base font-medium text-tSecondary">
+          Signup for purchase your desire products
+        </p>
+      </Flex>
+      <Flex className={"flex-col gap-4 w-full mt-5"}>
         <Flex className={"justify-between"}>
           <Input
             type={"text"}
@@ -31,7 +31,7 @@ const Register = () => {
         <Password />
         <AuthCommonUI />
       </Flex>
-    </Flex>
+    </>
   );
 };
 

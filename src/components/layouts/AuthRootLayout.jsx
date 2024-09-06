@@ -6,7 +6,9 @@ const AuthRootLayout = () => {
     <section className="w-screen h-screen">
       <Flex>
         <Flex className="items-center justify-center w-1/2">
-          <Outlet />
+          <Flex className="flex-col w-3/4 gap-2 p-6 bg-cbg border-cStroke">
+            <Outlet />
+          </Flex>
         </Flex>
         <Flex
           className="flex-col items-center justify-center w-1/2 h-screen gap-5"
