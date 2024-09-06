@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import Flex from "./Flex";
 import Button from "./Button";
+import { ToastContainer } from "react-toastify";
 
 const AuthCommonUI = () => {
   const { pathname } = useLocation();
 
   return (
     <Flex className={"flex-col gap-5"}>
+      <ToastContainer />
       <Flex className={"items-center gap-3"}>
         <input type="checkbox" id="terms" name="terms" />
         <label htmlFor="terms" className="text-sm font-medium">
@@ -17,7 +19,7 @@ const AuthCommonUI = () => {
         </label>
       </Flex>
       <Button
-        text={pathname === "/register" ?  "Sign Up" : "Sign In"}
+        text={pathname === "/register" ? "Sign Up" : "Sign In"}
         className={
           "bg-black text-white py-4 text-base font-semibold rounded-md"
         }

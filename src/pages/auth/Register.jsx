@@ -3,17 +3,46 @@ import AuthCommonUI from "../../components/ui/AuthCommonUI";
 import Flex from "../../components/ui/Flex";
 import { useState } from "react";
 import { axiosInstance } from "../../api/axiosInstance";
+import { Bounce, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [eye, setEye] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-   const a = await axiosInstance.post("/users", data);
-   console.log(a);
-   
+    const res = await axiosInstance.post("/users", data);
+    if (res.status === 201) {
+      toast.success("Account created successfully", {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      setTimeout(() => {
+        navigate("/login");
+      },1000);
+    } else {
+      toast.error("Something went wrong", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
   };
 
   return (

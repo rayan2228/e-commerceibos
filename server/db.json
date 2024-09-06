@@ -20,6 +20,20 @@
       "lName": "Waters",
       "email": "vaxy@mailinator.com",
       "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "2705",
+      "fName": "Boris",
+      "lName": "Rivas",
+      "email": "mukygujy@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "355b",
+      "fName": "Lacey",
+      "lName": "Rosales",
+      "email": "xary@mailinator.com",
+      "password": "Pa$$w0rd!"
     }
   ]
 }

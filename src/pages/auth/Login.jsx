@@ -1,15 +1,53 @@
 import { useForm } from "react-hook-form";
 import AuthCommonUI from "../../components/ui/AuthCommonUI";
 import { useState } from "react";
+import { axiosInstance } from "../../api/axiosInstance";
+import { Bounce, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const { data: users } = await axiosInstance.get("/users/");
+    const user = await users.find(
+      ({ email, password }) =>
+        email === data.email && password === data.password
+    );
+    if (user) {
+      toast.success("user login successfully", {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
+    } else {
+      toast.error("Something went wrong", {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
+  };
   return (
     <>
       <h4 className="font-medium text-[32px]">Welcome Back!</h4>

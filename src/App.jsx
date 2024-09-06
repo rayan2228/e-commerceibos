@@ -6,7 +6,7 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Products from "./pages/Products";
 import Carts from "./pages/Carts";
-
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <Routes>
