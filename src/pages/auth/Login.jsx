@@ -4,10 +4,12 @@ import { useState } from "react";
 import { axiosInstance } from "../../api/axiosInstance";
 import { Bounce, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-
+import { useAuth } from "../../hooks/useAuth";
+import Cookies from "js-cookie";
 const Login = () => {
   const [eye, setEye] = useState(false);
   const navigate = useNavigate();
+  const { setAuth } = useAuth();
   const {
     register,
     handleSubmit,
@@ -31,11 +33,13 @@ const Login = () => {
         theme: "light",
         transition: Bounce,
       });
+      setAuth(user);
+      Cookies.set("furniFlexAuth", JSON.stringify(user));
       setTimeout(() => {
         navigate("/");
       }, 1000);
     } else {
-      toast.error("Something went wrong", {
+      toast.error("email & password is incorrect", {
         position: "bottom-center",
         autoClose: 3000,
         hideProgressBar: false,

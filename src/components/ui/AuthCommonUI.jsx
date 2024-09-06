@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import Flex from "./Flex";
 import Button from "./Button";
 import { ToastContainer } from "react-toastify";
-
 const AuthCommonUI = () => {
   const { pathname } = useLocation();
 
