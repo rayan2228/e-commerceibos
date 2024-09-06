@@ -5,7 +5,21 @@
       "lName": "admin",
       "email": "admin@gmail.com",
       "password": "admin",
-      "terms": true
+      "id": "6ab7"
+    },
+    {
+      "id": "1fc8",
+      "fName": "Cadman",
+      "lName": "Waters",
+      "email": "vaxy@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "debb",
+      "fName": "Cadman",
+      "lName": "Waters",
+      "email": "vaxy@mailinator.com",
+      "password": "Pa$$w0rd!"
     }
   ]
 }

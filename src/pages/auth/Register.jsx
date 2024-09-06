@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import AuthCommonUI from "../../components/ui/AuthCommonUI";
 import Flex from "../../components/ui/Flex";
 import { useState } from "react";
+import { axiosInstance } from "../../api/axiosInstance";
 const Register = () => {
   const [eye, setEye] = useState(false);
   const {
@@ -9,7 +10,11 @@ const Register = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+   const a = await axiosInstance.post("/users", data);
+   console.log(a);
+   
+  };
 
   return (
     <>
