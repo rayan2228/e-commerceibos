@@ -4,6 +4,7 @@ import { useProduct } from "../../hooks/useProduct";
 import Loading from "../ui/Loading";
 import SingleProduct from "./SingleProduct";
 import Flex from "../ui/Flex";
+import Pagination from "./Pagination";
 let content;
 const ProductContainer = ({ className }) => {
   const { products, setProducts, filter } = useProduct();
@@ -31,7 +32,12 @@ const ProductContainer = ({ className }) => {
       <SingleProduct key={index} data={{ ...product, index }} />
     ));
   }
-  return <Flex className={`${className} flex-wrap gap-5`}>{content}</Flex>;
+  return (
+    <Flex className={` ${className} flex-col`}>
+      <Flex className={` flex-wrap gap-5 `}>{content}</Flex>
+      <Pagination />
+    </Flex>
+  );
 };
 
 export default ProductContainer;
