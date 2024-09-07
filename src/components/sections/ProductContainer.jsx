@@ -5,6 +5,7 @@ import Loading from "../ui/Loading";
 import SingleProduct from "./SingleProduct";
 import Flex from "../ui/Flex";
 import Pagination from "./Pagination";
+import ProductLoader from "../ui/ProductLoader";
 let content;
 const ProductContainer = ({ className }) => {
   const { products, setProducts, filter } = useProduct();
@@ -25,7 +26,7 @@ const ProductContainer = ({ className }) => {
     productsCall();
   }, [productsCall]);
   if (loading) {
-    content = <Loading />;
+    content = <ProductLoader />;
   }
   if (!loading) {
     content = products.map((product, index) => (

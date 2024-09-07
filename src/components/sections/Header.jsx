@@ -43,7 +43,7 @@ const Header = () => {
   console.log(cart);
   
   return (
-    <header className="py-10 border border-b-[#F1F1F1]">
+    <header className="py-10 border border-b-[#F1F1F1] cShadow">
       <Container>
         <Flex className={"items-center"}>
           <div className="w-1/4">
