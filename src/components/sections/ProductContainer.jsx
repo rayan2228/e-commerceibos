@@ -1,26 +1,25 @@
 import { useCallback, useEffect, useState } from "react";
-import { axiosInstance } from "../api/axiosInstance";
-import { useProduct } from "../hooks/useProduct";
-import Loading from "../components/ui/Loading";
-import SingleProduct from "../components/ui/SingleProduct";
-import Flex from "../components/ui/Flex";
+import { axiosInstance } from "../../api/axiosInstance";
+import { useProduct } from "../../hooks/useProduct";
+import Loading from "../ui/Loading";
+import SingleProduct from "./SingleProduct";
+import Flex from "../ui/Flex";
 let content;
 const ProductContainer = ({ className }) => {
-  const { products, setProducts } = useProduct();
+  const { products, setProducts, filter } = useProduct();
   const [loading, setLoading] = useState(true);
-  console.log(loading);
 
   const productsCall = useCallback(async () => {
     try {
       setLoading(true);
-      const { data } = await axiosInstance.get("/products");
+      const { data } = await axiosInstance.get(`/products/?category=${filter}`);
       setProducts(data);
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
     }
-  }, [setProducts]);
+  }, [setProducts,filter]);
   useEffect(() => {
     productsCall();
   }, [productsCall]);
@@ -28,9 +27,9 @@ const ProductContainer = ({ className }) => {
     content = <Loading />;
   }
   if (!loading) {
-    content = products.map((product) => (
-      <SingleProduct key={product.name} data={product} />
-    ))
+    content = products.map((product, index) => (
+      <SingleProduct key={index} data={product} />
+    ));
   }
   return <Flex className={`${className} flex-wrap gap-5`}>{content}</Flex>;
 };

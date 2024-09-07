@@ -1,5 +1,5 @@
 import Container from "../components/ui/Container";
-import ProductContainer from "./ProductContainer";
+import ProductContainer from "../components/sections/ProductContainer";
 
 const Home = () => {
   return (

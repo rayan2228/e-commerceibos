@@ -1,6 +1,6 @@
-import Flex from "./Flex";
-import Image from "./Image";
-import Button from "./Button";
+import Flex from "../ui/Flex";
+import Image from "../ui/Image";
+import Button from "../ui/Button";
 
 const SingleProduct = ({ data }) => {
   console.log(data);
