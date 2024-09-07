@@ -35,5 +35,171 @@
       "email": "xary@mailinator.com",
       "password": "Pa$$w0rd!"
     }
+  ],
+  "products": [
+    {
+      "name": "Recliner Chair Wood",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "It has a backrest that can be tilted back, and often a footrest extended",
+      "image": "/product1.png",
+      "category": "rocking chair"
+    },
+    {
+      "name": "Timber Ride Padded",
+      "price": "€59.00",
+      "discountedPrice": "€75.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product2.png",
+      "category": "rocking chair"
+    },
+    {
+      "name": "Colored Wooden Chair",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product3.png",
+      "category": "rocking chair"
+    },
+    {
+      "name": "Blank Bamboo Wicker",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product4.png",
+      "category": "side chair"
+    },
+    {
+      "name": "Isolated Wooden Rock",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+      "image": "/product5.png",
+      "category": "side chair"
+    },
+    {
+      "name": "Minimal Empty Rocking",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+      "image": "/product6.png",
+      "category": "side chair"
+    },
+
+    {
+      "name": "Recliner Chair Wood",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "It has a backrest that can be tilted back, and often a footrest extended",
+      "image": "/product1.png",
+      "category": "lounge chair"
+    },
+    {
+      "name": "Timber Ride Padded",
+      "price": "€59.00",
+      "discountedPrice": "€75.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product2.png",
+      "category": "lounge chair"
+    },
+    {
+      "name": "Colored Wooden Chair",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product3.png",
+      "category": "lounge chair"
+    },
+    {
+      "name": "Recliner Chair Wood",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "It has a backrest that can be tilted back, and often a footrest extended",
+      "image": "/product1.png",
+      "category": "rocking chair"
+    },
+    {
+      "name": "Timber Ride Padded",
+      "price": "€59.00",
+      "discountedPrice": "€75.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product2.png",
+      "category": "rocking chair"
+    },
+    {
+      "name": "Colored Wooden Chair",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product3.png",
+      "category": "rocking chair"
+    },
+    {
+      "name": "Blank Bamboo Wicker",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product4.png",
+      "category": "side chair"
+    },
+    {
+      "name": "Isolated Wooden Rock",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+      "image": "/product5.png",
+      "category": "side chair"
+    },
+    {
+      "name": "Minimal Empty Rocking",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+      "image": "/product6.png",
+      "category": "side chair"
+    },
+
+    {
+      "name": "Recliner Chair Wood",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "It has a backrest that can be tilted back, and often a footrest extended",
+      "image": "/product1.png",
+      "category": "lounge chair"
+    },
+    {
+      "name": "Timber Ride Padded",
+      "price": "€59.00",
+      "discountedPrice": "€75.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product2.png",
+      "category": "lounge chair"
+    },
+    {
+      "name": "Colored Wooden Chair",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage":"30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product3.png",
+      "category": "lounge chair"
+    }
   ]
 }

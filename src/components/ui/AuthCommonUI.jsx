@@ -20,7 +20,7 @@ const AuthCommonUI = () => {
       <Button
         text={pathname === "/register" ? "Sign Up" : "Sign In"}
         className={
-          "bg-black text-white py-4 text-base font-semibold rounded-md"
+          "btn"
         }
       />
       <p className="separator">or</p>

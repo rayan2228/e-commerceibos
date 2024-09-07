@@ -1,8 +1,14 @@
-
+import Container from "../components/ui/Container";
+import ProductContainer from "./ProductContainer";
 
 const Home = () => {
- 
-  return <div>Home</div>;
+  return (
+    <section>
+      <Container>
+        <ProductContainer />
+      </Container>
+    </section>
+  );
 };
 
 export default Home;
