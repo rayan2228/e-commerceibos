@@ -34,7 +34,10 @@ const Login = () => {
         transition: Bounce,
       });
       setAuth(user);
-      Cookies.set("furniFlexAuth", JSON.stringify(user));
+      Cookies.set("furniFlexAuth", JSON.stringify(user), {
+        expires: 7,
+        secure: true,
+      });
       setTimeout(() => {
         navigate("/");
       }, 1000);

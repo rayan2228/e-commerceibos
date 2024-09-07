@@ -19,7 +19,7 @@ const ProductContainer = ({ className }) => {
     } finally {
       setLoading(false);
     }
-  }, [setProducts,filter]);
+  }, [setProducts, filter]);
   useEffect(() => {
     productsCall();
   }, [productsCall]);
@@ -28,7 +28,7 @@ const ProductContainer = ({ className }) => {
   }
   if (!loading) {
     content = products.map((product, index) => (
-      <SingleProduct key={index} data={product} />
+      <SingleProduct key={index} data={{ ...product, index }} />
     ));
   }
   return <Flex className={`${className} flex-wrap gap-5`}>{content}</Flex>;

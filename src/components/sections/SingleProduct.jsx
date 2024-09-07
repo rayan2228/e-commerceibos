@@ -2,10 +2,20 @@ import Flex from "../ui/Flex";
 import Image from "../ui/Image";
 import Button from "../ui/Button";
 import { useCart } from "../../hooks/useCart";
+import { useAuth } from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const SingleProduct = ({ data }) => {
-  const {cart,setCart} = useCart()
-
+  const { updateQuantity } = useCart();
+  const { auth } = useAuth();
+  const navigate = useNavigate();
+  const handleGoToCart = () => {
+    if (Object.keys(auth).length) {
+      updateQuantity(data);
+    } else {
+      navigate("/login");
+    }
+  };
   return (
     <div className="w-[315px] border border-[#F1F1F1] rounded-2xl p-4">
       <Flex className="bg-[#F2F2F2] justify-center items-center p-4 rounded-lg">
@@ -27,7 +37,7 @@ const SingleProduct = ({ data }) => {
         <p className="text-[#838383] text-sm">{data.description}</p>
       </Flex>
       <Button
-      onClick={()=>setCart([...cart,data])}
+        onClick={handleGoToCart}
         text={"Add to cart"}
         className={"btn w-full flex justify-center items-center gap-4"}
       >

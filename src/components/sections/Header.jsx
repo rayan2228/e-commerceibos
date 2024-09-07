@@ -3,6 +3,9 @@ import Image from "../ui/Image";
 import List from "../ui/List";
 import ListItem from "../ui/ListItem";
 import Flex from "../ui/Flex";
+import { useCart } from "../../hooks/useCart";
+import { useAuth } from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 let links = [
   {
     name: "Home",
@@ -25,7 +28,20 @@ let links = [
     link: "/Bbog",
   },
 ];
+
 const Header = () => {
+  const { cart } = useCart();
+  const { auth } = useAuth();
+  const navigate = useNavigate();
+  const handleGoToCart = () => {
+    if (Object.keys(auth).length) {
+      navigate("/carts");
+    } else {
+      navigate("/login");
+    }
+  };
+  console.log(cart);
+  
   return (
     <header className="py-10 border border-b-[#F1F1F1]">
       <Container>
@@ -46,7 +62,7 @@ const Header = () => {
             </List>
           </nav>
           <Flex className="items-center justify-end w-1/4 gap-5">
-            <div className="relative">
+            <div className="relative cursor-pointer" onClick={handleGoToCart}>
               <svg
                 width="33"
                 height="34"
@@ -73,8 +89,8 @@ const Header = () => {
                   fill="#323232"
                 />
               </svg>
-              <span className="absolute text-xs text-white bottom-0 right-0 translate-x-[-80%] translate-y-[-35%]">
-                2
+              <span className="absolute text-xs text-white bottom-0 right-0 translate-x-[-80%] ">
+                {cart.length}
               </span>
             </div>
             <div>

@@ -37,7 +37,7 @@ const SideBar = () => {
                 onClick={() => setFilter(name)}
                 text={name}
                 className={`btn w-[90%] first-letter:capitalize bg-transparent text-[#717171] ${
-                  filter === name && "bg-black !text-white"
+                  filter === name && "!bg-black !text-white"
                 }`}
               />
             </li>
