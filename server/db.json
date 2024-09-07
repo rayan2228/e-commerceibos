@@ -107,7 +107,16 @@
       "discountedPrice": "€75.00",
       "discountPercentage": "30",
       "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
-      "image": "/product2.png",
+      "image": "/product6.png",
+      "category": "lounge chair"
+    },
+    {
+      "name": "Colored Wooden Chair",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage": "30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product4.png",
       "category": "lounge chair"
     },
     {
@@ -189,7 +198,16 @@
       "discountedPrice": "€75.00",
       "discountPercentage": "30",
       "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
-      "image": "/product2.png",
+      "image": "/product6.png",
+      "category": "lounge chair"
+    },
+    {
+      "name": "Colored Wooden Chair",
+      "price": "€299.00",
+      "discountedPrice": "€350.00",
+      "discountPercentage": "30",
+      "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+      "image": "/product4.png",
       "category": "lounge chair"
     },
     {
@@ -200,7 +218,7 @@
       "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
       "image": "/product3.png",
       "category": "lounge chair"
-    }
+    },
   ],
   "categories": [
     {

@@ -1,9 +1,10 @@
 import Flex from "../ui/Flex";
 import Image from "../ui/Image";
 import Button from "../ui/Button";
+import { useCart } from "../../hooks/useCart";
 
 const SingleProduct = ({ data }) => {
-  console.log(data);
+  const {cart,setCart} = useCart()
 
   return (
     <div className="w-[315px] border border-[#F1F1F1] rounded-2xl p-4">
@@ -26,6 +27,7 @@ const SingleProduct = ({ data }) => {
         <p className="text-[#838383] text-sm">{data.description}</p>
       </Flex>
       <Button
+      onClick={()=>setCart([...cart,data])}
         text={"Add to cart"}
         className={"btn w-full flex justify-center items-center gap-4"}
       >
